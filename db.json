@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+        "username": "jovid",
+        "password": "123456"
+    },
+    {
+        "username": "admin",
+        "password": "admin_test"
+    }
+],
+  "contacts": [
+    {
+        "key": "1",
+        "name": "jovid",
+        "address": "test"
+    }
+  ]
+}
