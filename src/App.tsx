@@ -5,7 +5,6 @@ import { Layout } from "antd"
 
 // components
 import AppRouter from "components/AppRouter"
-import Navbar from "components/navbar"
 
 // hooks
 import { useAppDispatch } from "hooks/useAppDispatch"
@@ -34,7 +33,7 @@ function App() {
 
     return (
         <Layout>
-            <Navbar />
+            {/* <Navbar /> */}
             <Layout.Content>
                 <AppRouter />
             </Layout.Content>

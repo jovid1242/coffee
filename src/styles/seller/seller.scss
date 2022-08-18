@@ -1,0 +1,17 @@
+.products-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 20px 70px 20px;
+
+    .product-card {
+        &__image img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        &__action {
+            width: 100%;
+        }
+    }
+}
