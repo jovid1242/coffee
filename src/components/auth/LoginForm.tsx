@@ -29,50 +29,54 @@ const LoginForm: FC = () => {
     }
 
     return (
-        <div className="form-wrapper">
-            {isError && (
-                <div>
-                    <Text type="danger">{isError}</Text>
-                </div>
-            )}
-            <Title level={2} className="text-yellow mb2">
-                Авторизация
-            </Title>
-            <Form
-                initialValues={{ remember: true }}
-                onFinish={submitForm}
-                autoComplete="off"
-            >
-                <Form.Item
-                    name="username"
-                    rules={[
-                        rules.required(
-                            "Пожалуйста, введите ваше имя пользователя!"
-                        ),
-                    ]}
+        <div className="form-login">
+            <div className="form-login__wrapper">
+                {isError && (
+                    <div>
+                        <Text type="danger">{isError}</Text>
+                    </div>
+                )}
+                <Title level={2} className="text-yellow mb2">
+                    Авторизация
+                </Title>
+                <Form
+                    initialValues={{ remember: true }}
+                    onFinish={submitForm}
+                    autoComplete="off"
                 >
-                    <Input placeholder="Имя ползователья" />
-                </Form.Item>
-
-                <Form.Item
-                    name="password"
-                    rules={[rules.required("Пожалуйста, введите ваш пароль!")]}
-                >
-                    <Input.Password placeholder="Пароль" />
-                </Form.Item>
-
-                <Form.Item>
-                    <Button
-                        type="primary"
-                        htmlType="submit"
-                        loading={isLoading}
-                        className="btn"
-                        ghost
+                    <Form.Item
+                        name="username"
+                        rules={[
+                            rules.required(
+                                "Пожалуйста, введите ваше имя пользователя!"
+                            ),
+                        ]}
                     >
-                        Войти
-                    </Button>
-                </Form.Item>
-            </Form>
+                        <Input placeholder="Имя ползователья" />
+                    </Form.Item>
+
+                    <Form.Item
+                        name="password"
+                        rules={[
+                            rules.required("Пожалуйста, введите ваш пароль!"),
+                        ]}
+                    >
+                        <Input.Password placeholder="Пароль" />
+                    </Form.Item>
+
+                    <Form.Item>
+                        <Button
+                            type="primary"
+                            htmlType="submit"
+                            loading={isLoading}
+                            className="btn"
+                            ghost
+                        >
+                            Войти
+                        </Button>
+                    </Form.Item>
+                </Form>
+            </div>
         </div>
     )
 }

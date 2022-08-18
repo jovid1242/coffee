@@ -36,9 +36,7 @@ export const AuthActionCreators = {
             dispatch(AuthActionCreators.setIsLoading(true))
             try {
                 setTimeout(async () => {
-                    const response = await axios.get<IUser[]>(
-                        "https://my-json-server.typicode.com/jovid1242/auth-test/users"
-                    )
+                    const response = await axios.get<IUser[]>("./user.json")
                     const mockUser = response.data.find(
                         (user) =>
                             user.username === username &&

@@ -1,5 +1,9 @@
 @import "~antd/dist/antd.css";
 
+body {
+    font-family: "Roboto Mono", monospace;
+}
+
 .h100 {
     height: calc(100vh);
 }
@@ -11,6 +15,10 @@
 .btn {
     border-color: #e68134 !important;
     color: #e68134 !important;
+}
+
+.ant-layout {
+    background: #fff !important;
 }
 
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover {
@@ -41,6 +49,10 @@
 
 .text-yellow {
     color: #e68134 !important;
+}
+
+.text-white {
+    color: #fff !important;
 }
 
 .w100 {
